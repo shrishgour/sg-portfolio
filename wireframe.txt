@@ -1,0 +1,21 @@
+[ Sticky Navbar ]
+| Logo                          [Projects] [About] [Contact] |
+
+[ Hero ]
+| Big headline, short subtext, 2 CTAs (View Work / Contact)  |
+
+[ Projects ]
+| [Card][Card][Card]  (grid, images, tags, link buttons)     |
+
+[ About ]
+| [Profile image]   |  Heading + short bio + skills list     |
+
+[ Contact ]
+| Name | Email | Message | Send                              |
+
+[ Footer ]
+| © Your name — social links                                  |
+
+https://land-book.com/websites/81880-flatpay-affordable-payment-solutions-unmatched-service
+https://onepagelove.com/daniel-herzog
+https://onepagelove.com/maja-lombardi
