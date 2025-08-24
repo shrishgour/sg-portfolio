@@ -1,7 +1,7 @@
 // components/Hero.jsx
 "use client";
 
-import heroImg from "@/public/hero-img-3.png";
+import heroImg from "@/public/heroimg3.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
