@@ -1,12 +1,20 @@
 // components/Navbar.jsx
 "use client";
-import { Github, Linkedin, MailIcon, SmartphoneIcon } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  MailIcon,
+  Menu,
+  SmartphoneIcon,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -23,6 +31,7 @@ export default function Navbar() {
             : "bg-background"
         }`}
       >
+        {/* Logo */}
         <Link
           href="#hero"
           className="mr-10 flex items-center gap-2 text-xl font-bold"
@@ -30,6 +39,8 @@ export default function Navbar() {
           <Logo />
           Shrish
         </Link>
+
+        {/* Desktop Links */}
         <div className="hidden space-x-8 font-semibold md:flex">
           <a href="#about" className="hover:text-primary transition">
             About
@@ -45,13 +56,13 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="flex items-center gap-4 font-bold">
+        {/* Right Icons */}
+        <div className="hidden items-center gap-4 md:flex">
           <a
             href="tel:+919828081466"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-md border-2 p-2 transition"
           >
             <SmartphoneIcon className="h-6 w-6" />
-            {/* <span>(+91) 9828081466 </span> */}
           </a>
           <a
             href="mailto:yourmail@example.com"
@@ -74,7 +85,49 @@ export default function Navbar() {
             <Linkedin className="h-6 w-6" />
           </a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="border-primary text-primary rounded-md border-2 p-2 md:hidden"
+        >
+          {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="bg-background mt-2 rounded-md p-4 shadow md:hidden">
+          <div className="flex flex-col space-y-4 font-semibold">
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </div>
+          <div className="mt-4 flex justify-center gap-4">
+            <a href="tel:+919828081466">
+              <SmartphoneIcon className="h-6 w-6" />
+            </a>
+            <a href="mailto:yourmail@example.com">
+              <MailIcon className="h-6 w-6" />
+            </a>
+            <a href="https://github.com/shrishgour">
+              <Github className="h-6 w-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">
+              <Linkedin className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
