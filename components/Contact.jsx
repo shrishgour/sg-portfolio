@@ -1,16 +1,56 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const res = await fetch("https://formspree.io/f/xpwjalwo", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    if (res.ok) {
+      setStatus("SUCCESS");
+      form.reset();
+    } else {
+      setStatus("ERROR");
+    }
+  };
+
   return (
-    <section id="contact" className="w-full max-w-xl px-4">
-      <h2 className="mb-6 text-center text-3xl font-bold">Contact Me</h2>
-      <form className="flex flex-col gap-4">
-        <Input type="text" placeholder="Your Name" />
-        <Input type="email" placeholder="Your Email" />
-        <Textarea placeholder="Your Message" />
-        <Button type="submit">Send</Button>
+    <section id="contact" className="mx-auto w-full max-w-xl px-4 py-20">
+      <h2 className="mb-6 text-center text-3xl font-bold tracking-tight uppercase">
+        Contact Me
+      </h2>
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <Input type="text" name="name" placeholder="Your Name" required />
+        <Input type="email" name="email" placeholder="Your Email" required />
+        <Textarea name="message" placeholder="Your Message" required />
+
+        <Button type="submit" className="w-full">
+          Send
+        </Button>
+
+        {status === "SUCCESS" && (
+          <p className="mt-4 text-center text-2xl text-green-600">
+            ✅ Message sent successfully!
+          </p>
+        )}
+        {status === "ERROR" && (
+          <p className="mt-4 text-center text-2xl text-red-600">
+            ❌ Oops! Something went wrong.
+          </p>
+        )}
       </form>
     </section>
   );
