@@ -18,14 +18,6 @@ export default function Hero() {
         <a href="#projects">
           <Button size="lg">View Projects</Button>
         </a>
-        <a href="#contact">
-          <Button size="lg" variant="outline">
-            Contact Me
-          </Button>
-          <Button size="lg" variant="secondary">
-            Contact Me
-          </Button>
-        </a>
       </div>
     </section>
   );

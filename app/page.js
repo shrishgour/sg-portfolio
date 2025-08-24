@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 export default function Page() {
   return (
     <main className="flex flex-col items-center gap-16">
-      <div className="mt-2 w-99/100 rounded-lg">
+      <div className="bg-background-2 mt-2 w-99/100 rounded-lg">
         <Navbar />
         <Hero />
       </div>

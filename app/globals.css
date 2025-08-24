@@ -5,8 +5,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
 :root {
   --background: rgb(248, 250, 252);
+  --background-2: #e0e0fc;
   --foreground: rgb(30, 41, 59);
   --card: rgb(255, 255, 255);
   --card-foreground: rgb(30, 41, 59);
@@ -113,6 +123,7 @@ html {
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2: var(--background-2);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
