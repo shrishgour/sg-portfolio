@@ -58,7 +58,7 @@ export default function Navbar() {
           <a href="#skills" className="hover:text-primary transition">
             Skills
           </a>
-          <a href="#contact" className="hover:text-primary transition">
+          <a href="#process-contact" className="hover:text-primary transition">
             Contact
           </a>
         </div>

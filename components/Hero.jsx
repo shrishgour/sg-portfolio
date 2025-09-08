@@ -53,7 +53,7 @@ export default function Hero() {
             View Projects
           </Link>
           <Link
-            href="#contact"
+            href="#process-contact"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg border px-6 py-3 font-semibold"
           >
             Contect Me
