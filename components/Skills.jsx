@@ -8,7 +8,7 @@ export default function Skills() {
       <div className="container mx-auto px-6">
         <Card className="border-border/40 mx-auto max-w-6xl rounded-2xl border shadow-md">
           <CardHeader className="text-center">
-            <CardTitle className="text-4xl font-bold tracking-tight uppercase">
+            <CardTitle className="text-secondary-foreground text-4xl font-semibold tracking-[0.125rem] uppercase">
               Skills
             </CardTitle>
           </CardHeader>

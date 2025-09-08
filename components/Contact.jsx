@@ -27,31 +27,28 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="mx-auto w-full max-w-xl px-4 py-20">
-      <h2 className="mb-6 text-center text-3xl font-bold tracking-tight uppercase">
-        Contact Me
-      </h2>
+    <form
+      onSubmit={handleSubmit}
+      className="dark mx-4 flex flex-col justify-start gap-4"
+    >
+      <Input type="text" name="name" placeholder="Your Name" required />
+      <Input type="email" name="email" placeholder="Your Email" required />
+      <Textarea name="message" placeholder="Your Message" required />
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <Input type="text" name="name" placeholder="Your Name" required />
-        <Input type="email" name="email" placeholder="Your Email" required />
-        <Textarea name="message" placeholder="Your Message" required />
+      <Button type="submit" className="w-full">
+        Send
+      </Button>
 
-        <Button type="submit" className="w-full">
-          Send
-        </Button>
-
-        {status === "SUCCESS" && (
-          <p className="mt-4 text-center text-2xl text-green-600">
-            ✅ Message sent successfully!
-          </p>
-        )}
-        {status === "ERROR" && (
-          <p className="mt-4 text-center text-2xl text-red-600">
-            ❌ Oops! Something went wrong.
-          </p>
-        )}
-      </form>
-    </section>
+      {status === "SUCCESS" && (
+        <p className="mt-4 text-center text-2xl text-green-600">
+          ✅ Message sent successfully!
+        </p>
+      )}
+      {status === "ERROR" && (
+        <p className="mt-4 text-center text-2xl text-red-600">
+          ❌ Oops! Something went wrong.
+        </p>
+      )}
+    </form>
   );
 }

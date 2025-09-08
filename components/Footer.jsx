@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, SmartphoneIcon } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "./NavLogo";
 
 export default function Footer() {
   return (

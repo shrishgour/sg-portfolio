@@ -7,12 +7,20 @@ export default function AboutMe() {
       <div className="container mx-auto px-6">
         <Card className="border-border/40 mx-auto max-w-5xl rounded-2xl border px-8 shadow-md">
           <CardHeader className="text-center">
-            <CardTitle className="text-4xl font-bold tracking-tight uppercase">
-              About Me
-            </CardTitle>
+            <h2>
+              <CardTitle className="text-secondary-foreground text-4xl font-semibold tracking-[0.125rem] uppercase">
+                About Me
+              </CardTitle>
+            </h2>
           </CardHeader>
           <CardContent className="text-muted-foreground space-y-8 text-lg leading-relaxed">
             <p className="text-foreground/90">
+              My focus is on building fast, SEO-friendly websites that help
+              businesses showcase their brand and convert visitors into
+              customers.
+            </p>
+
+            <p>
               I’m a <span className="font-semibold">full-stack developer </span>
               transitioning from a deep background in{" "}
               <span className="font-semibold">C#</span> and{" "}

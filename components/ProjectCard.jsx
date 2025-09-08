@@ -16,7 +16,12 @@ export default function ProjectCard({
       {/* Conditional rendering for screenshot or fallback */}
       {image ? (
         <div className="relative h-48 w-full">
-          <Image src={image} alt={title} fill className="object-cover" />
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover object-top"
+          />
         </div>
       ) : (
         <div className="bg-muted flex h-48 w-full items-center justify-center">
@@ -25,7 +30,9 @@ export default function ProjectCard({
       )}
 
       <CardHeader>
-        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+        <CardTitle className="text-secondary-foreground text-lg font-semibold tracking-[0.125rem] uppercase">
+          {title}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="flex flex-1 flex-col justify-between">
@@ -33,12 +40,12 @@ export default function ProjectCard({
           <p className="text-muted-foreground mb-3">{description}</p>
           <div className="mb-4 flex flex-wrap gap-2">
             {tech.map((t, i) => (
-              <span
+              <code
                 key={i}
-                className="bg-muted rounded-md px-2 py-1 text-xs font-medium"
+                className="bg-secondary rounded-md px-2 py-1 text-xs font-medium"
               >
                 {t}
-              </span>
+              </code>
             ))}
           </div>
         </div>

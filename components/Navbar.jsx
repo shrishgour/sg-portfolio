@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
+import Logo from "./NavLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,6 +47,13 @@ export default function Navbar() {
           </a>
           <a href="#projects" className="hover:text-primary transition">
             Projects
+          </a>
+          <a
+            href="https://shrish-mythoughtpages.vercel.app/"
+            target="_blank"
+            className="hover:text-primary transition"
+          >
+            Blog
           </a>
           <a href="#skills" className="hover:text-primary transition">
             Skills
