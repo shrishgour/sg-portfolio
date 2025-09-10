@@ -54,7 +54,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-10 sm:py-20">
       <Card className="max-w-7xl rounded-2xl border-transparent px-8 pb-8">
         <CardHeader className="text-center">
           <CardTitle className="text-secondary-foreground text-4xl font-semibold tracking-[0.125rem] uppercase">

@@ -4,7 +4,7 @@ import { Code, Database, Palette, Workflow } from "lucide-react";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-10 sm:py-20">
       <div className="container mx-auto px-6">
         <Card className="border-border/40 mx-auto max-w-6xl rounded-2xl border shadow-md">
           <CardHeader className="text-center">

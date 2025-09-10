@@ -3,12 +3,12 @@ import Contact from "./Contact";
 
 export default function ProcessCTA() {
   return (
-    <section className="py-20" id="process-contact">
+    <section className="py-10 sm:py-20" id="process-contact">
       <div className="container mx-auto px-6">
-        <Card className="bg-[linear-gradient(to_right,white_50%,var(--foreground)_50%)] p-12 shadow-md">
-          <CardContent className="grid grid-cols-1 gap-x-32 md:grid-cols-2">
+        <Card className="overflow-hidden shadow-md">
+          <CardContent className="grid grid-cols-1 gap-24 md:grid-cols-2">
             {/* Left: Process */}
-            <div>
+            <div className="sm:p-8">
               <h2 className="text-secondary-foreground mx-2 mb-6 text-2xl font-semibold tracking-[0.125rem] uppercase">
                 How I Work
               </h2>
@@ -42,7 +42,7 @@ export default function ProcessCTA() {
             </div>
 
             {/* Right: Contact */}
-            <div>
+            <div className="bg-foreground -m-8 p-8 sm:p-16">
               <h2 className="text-primary-foreground mx-4 mb-6 text-2xl font-semibold tracking-[0.125rem] uppercase">
                 Get in Touch
               </h2>
