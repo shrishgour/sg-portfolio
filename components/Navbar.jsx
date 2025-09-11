@@ -72,7 +72,7 @@ export default function Navbar() {
             <SmartphoneIcon className="h-6 w-6" />
           </a>
           <a
-            href="mailto:yourmail@example.com"
+            href="mailto:shrishgour.dev@gmail.com"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-md border-2 p-2 transition"
           >
             <MailIcon className="h-6 w-6" />
@@ -84,7 +84,7 @@ export default function Navbar() {
             <Github className="h-6 w-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/shrish-gour-6200874a/"
             target="_blank"
             rel="noopener noreferrer"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-md border-2 p-2 transition"
